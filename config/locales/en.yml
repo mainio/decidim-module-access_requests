@@ -1,4 +1,7 @@
 en:
+  activemodel:
+    models:
+      decidim/access_requests/access_request_confirmed_event: Access request confirmed
   decidim:
     access_requests:
       verification:
@@ -58,3 +61,10 @@ en:
               description: >
                 You will get notified once the request review has been
                 completed.
+    events:
+      access_requests:
+        confirmed:
+          email_intro: Congratulations! You have been granted access to %{verification_name}.
+          email_outro: You have received this notification because your access request has been approved.
+          email_subject: You have been granted access to %{verification_name}!
+          notification_title: You have been granted access to %{verification_name}.

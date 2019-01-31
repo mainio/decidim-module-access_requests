@@ -1,4 +1,7 @@
 fi:
+  activemodel:
+    models:
+      decidim/access_requests/access_request_confirmed_event: Pääsyoikeus myönnetty
   decidim:
     access_requests:
       verification:
@@ -56,3 +59,10 @@ fi:
             step3:
               title: Vaihe 3
               description: Saat ilmoituksen, kun pyyntösi on käsitelty.
+    events:
+      access_requests:
+        confirmed:
+          email_intro: Onnittelut! Sinulle on myönnetty pääsy kohteeseen %{verification_name}.
+          email_outro: Saat tämän ilmoituksen, koska pääsyoikeuspyyntösi on hyväksytty.
+          email_subject: Sinulle on myönnetty pääsy kohteeseen %{verification_name}!
+          notification_title: Sinulle on myönnetty pääsy kohteeseen %{verification_name}.
