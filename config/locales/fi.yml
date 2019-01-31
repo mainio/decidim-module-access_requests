@@ -1,0 +1,58 @@
+fi:
+  decidim:
+    access_requests:
+      verification:
+        admin:
+          granted_authorizations:
+            destroy:
+              error: Poistettaessa varmennusta tapahtui virhe.
+              success: Varmennus poistettu onnistuneesti.
+            index:
+              name: Nimi
+              new: Uusi
+              nickname: Nimimerkki
+              pending_authorizations: Odottavat pyynnöt
+              remove_access: Poista pääsyoikeus
+              title: Myönnetyt oikeudet
+              username: Käyttäjänimi
+            new:
+              actions: Toimet
+              created_at: Luonnin ajankohta
+              grant_access: Myönnä pääsyoikeus
+              name: Nimi
+              nickname: Nimimerkki
+              search: Hae
+              users: Käyttäjät
+          pending_authorizations:
+            destroy:
+              error: Evättäessä pääsyoikeutta tapahtui virhe.
+              success: Pääsyoikeus evätty onnistuneesti.
+            index:
+              approve_request: Myönnä pääsyoikeus
+              granted_authorizations: Myönnetyt pääsyoikeudet
+              name: Nimi
+              nickname: Nimimerkki
+              reject_request: Hylkää pyyntö
+              title: Odottavat pyynnöt
+            update:
+              error: Hyväksyttäessä käyttäjän pyyntöä tapahtui virhe.
+              success: Pääsyoikeus myönnetty onnistuneesti.
+        authorizations:
+          create:
+            error: Luotaessa pyyntöä tapahtui virhe.
+            success: Pyyntö luotu onnistuneesti.
+          edit:
+            title: Pyyntösi odottaa
+          new:
+            title: Pyydä pääsyoikeutta
+            send: Lähetä pyyntö
+          steps:
+            step1:
+              title: Vaihe 1
+              description: Lähetä pääsyoikeuspyyntö.
+            step2:
+              title: Vaihe 2
+              description: Odota pyynnön tarkastusta.
+            step3:
+              title: Vaihe 3
+              description: Saat ilmoituksen, kun pyyntösi on käsitelty.

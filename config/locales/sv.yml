@@ -1,0 +1,60 @@
+sv:
+  decidim:
+    access_requests:
+      verification:
+        admin:
+          granted_authorizations:
+            destroy:
+              error: There was an error deleting the verification.
+              success: Verification was deleted successfully.
+            index:
+              name: Name
+              new: New
+              nickname: Nickname
+              pending_authorizations: Pending requests
+              remove_access: Remove access
+              title: Granted requests
+              username: Username
+            new:
+              actions: Actions
+              created_at: Created at
+              grant_access: Grant access
+              name: Name
+              nickname: Nickname
+              search: Search
+              users: Users
+          pending_authorizations:
+            destroy:
+              error: There was an error rejecting the access request.
+              success: Access request was rejected successfully.
+            index:
+              approve_request: Grant access
+              granted_authorizations: Granted requests
+              name: Name
+              nickname: Nickname
+              reject_request: Reject access
+              title: Pending requests
+            update:
+              error: There was an error verifying access for the user.
+              success: Access successfully granted for the user.
+        authorizations:
+          create:
+            error: There was an error creating the access request.
+            success: Access request successfully created.
+          edit:
+            title: Your request is pending
+          new:
+            title: Request access
+            send: Send request
+          steps:
+            step1:
+              title: Step 1
+              description: Send access request.
+            step2:
+              title: Step 2
+              description: Wait for review of the request.
+            step3:
+              title: Step 3
+              description: >
+                You will get notified once the request review has been
+                completed.

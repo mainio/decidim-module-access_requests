@@ -1,0 +1,44 @@
+<div class="card">
+  <div class="card-divider">
+    <h2 class="card-title">
+      <%= t(".title") %>
+      <%= link_to t(".pending_authorizations"), pending_authorizations_path, class: "button tiny button--title" %>
+      <%= link_to t(".new"), new_granted_authorization_path, class: "button tiny button--title" %>
+    </h2>
+  </div>
+  <div class="card-section">
+    <table class="table-list">
+      <thead>
+        <tr>
+          <th><%= t(".name") %></th>
+          <th><%= t(".nickname") %></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @granted_authorizations.each do |authorization| %>
+          <tr>
+            <td>
+              <%= authorization.user.name %>
+            </td>
+            <td>
+              <%= authorization.user.nickname %>
+            </td>
+            <td class="table-list__actions">
+              <%= icon_link_to "person",
+                               decidim.profile_path(authorization.user.nickname),
+                               t("layouts.decidim.user_profile.account"),
+                               class:"action-icon--show",
+                               target: "_blank" %>
+              <%= icon_link_to "circle-x",
+                              granted_authorization_path(authorization.id),
+                              t(".remove_access"),
+                              method: :delete,
+                              class: "action-icon--delete" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

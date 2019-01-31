@@ -1,0 +1,40 @@
+<%
+active ||= []
+steps = [
+  {
+    icon: "envelope-closed",
+    title: t(".step1.title"),
+    description: t(".step1.description")
+  },
+  {
+    icon: "check",
+    title: t(".step2.title"),
+    description: t(".step2.description")
+  },
+  {
+    icon: "bell",
+    title: t(".step3.title"),
+    description: t(".step3.description")
+  }
+]
+%>
+
+<div class="row small-up-1 medium-up-3 step-bullets">
+  <% steps.each_with_index do |step, i| %>
+    <%
+    cls = "step-bullet text-center"
+    cls << " completed" if active.include?(i)
+    %>
+    <div class="column">
+      <div class="<%= cls %>">
+        <div class="step-bullet__icon">
+          <%= icon step[:icon] %>
+        </div>
+        <div class="step-bullet__desc">
+          <h4 class="heading6"><%= step[:title] %></h4>
+          <p><%= step[:description] %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
