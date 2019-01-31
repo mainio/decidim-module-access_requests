@@ -33,5 +33,5 @@ group :development do
 end
 
 group :test do
-  gem 'codecov', :require => false
+  gem "codecov", require: false
 end
