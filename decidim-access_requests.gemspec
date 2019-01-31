@@ -1,18 +1,19 @@
+# frozen_string_literal: true
 
-lib = File.expand_path("../lib", __FILE__)
+lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "decidim/access_requests/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "decidim-access_requests"
-  spec.version       = Decidim::AccessRequests::VERSION
-  spec.authors       = ["Antti Hukkanen"]
-  spec.email         = ["antti.hukkanen@mainiotech.fi"]
+  spec.name = "decidim-access_requests"
+  spec.version = Decidim::AccessRequests::VERSION
+  spec.authors = ["Antti Hukkanen"]
+  spec.email = ["antti.hukkanen@mainiotech.fi"]
 
-  spec.summary       = "Allows admins to add new access request authorizations."
-  spec.description   = "Access requests allow platform users to request access on specific features of the platform."
-  spec.homepage      = "https://github.com/mainio/decidim-module-access_requests"
-  spec.license       = "AGPL-3.0"
+  spec.summary = "Allows admins to add new access request authorizations."
+  spec.description = "Access requests allow platform users to request access on specific features of the platform."
+  spec.homepage = "https://github.com/mainio/decidim-module-access_requests"
+  spec.license = "AGPL-3.0"
 
   spec.files = Dir[
     "{app,config,lib}/**/*",
