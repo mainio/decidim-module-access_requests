@@ -30,7 +30,7 @@ The gem has been developed by [Mainio Tech](https://www.mainiotech.fi/).
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'decidim-access_requests', :git => 'git@github.com:mainio/decidim-module-access_requests.git'
+gem 'decidim-access_requests'
 ```
 
 And then execute:
