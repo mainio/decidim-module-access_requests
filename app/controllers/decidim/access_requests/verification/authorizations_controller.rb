@@ -3,7 +3,7 @@
 module Decidim
   module AccessRequests
     module Verification
-      class AuthorizationsController < ApplicationController
+      class AuthorizationsController < Decidim::ApplicationController
         helper_method :authorization
 
         before_action :load_authorization
