@@ -35,6 +35,10 @@ module Decidim
               on(:invalid) do
                 parent.send(:broadcast, :invalid)
               end
+
+              on(:already_confirmed) do
+                parent.send(:broadcast, :invalid)
+              end
             end
           end
 
