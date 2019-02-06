@@ -4,6 +4,7 @@ PATH
     decidim-access_requests (0.15.0)
       decidim-admin (~> 0.15.0)
       decidim-core (~> 0.15.0)
+      decidim-verifications (~> 0.15.0)
 
 GEM
   remote: https://rubygems.org/
