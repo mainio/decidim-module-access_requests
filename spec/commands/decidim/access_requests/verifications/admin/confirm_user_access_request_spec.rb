@@ -37,8 +37,7 @@ module Decidim
                 event: "decidim.events.access_requests.confirmed",
                 event_class: Decidim::AccessRequests::AccessRequestConfirmedEvent,
                 resource: authorization,
-                # affected_users: [authorization.user], # 0.16+
-                recipient_ids: [authorization.user.id],
+                affected_users: [authorization.user],
                 extra: {
                   user_name: authorization.user.name,
                   user_nickname: authorization.user.nickname,
