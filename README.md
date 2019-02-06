@@ -1,7 +1,5 @@
 # Decidim::AccessRequests
 
-**THIS MODULE IS CURRENTLY UNDER DEVELOPMENT**
-
 A [Decidim](https://github.com/decidim/decidim) module that provides a new
 verification method that allows system administrators to define new verification
 workflows where the admins can provide access to specific users.
