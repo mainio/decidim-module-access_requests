@@ -11,6 +11,7 @@ module Decidim
 
           helper Decidim::Messaging::ConversationHelper
 
+          before_action :check_verification_manifest
           before_action :load_user, only: [:create]
           before_action :load_authorization, only: [:create]
 
@@ -56,7 +57,7 @@ module Decidim
               end
 
               on(:invalid) do
-                flash.now[:alert] = t("pending_authorizations.update.error", scope: "decidim.access_requests.verification.admin")
+                flash[:alert] = t("pending_authorizations.update.error", scope: "decidim.access_requests.verification.admin")
                 redirect_to granted_authorizations_path
               end
             end
@@ -72,13 +73,17 @@ module Decidim
               end
 
               on(:invalid) do
-                flash.now[:alert] = t("granted_authorizations.destroy.error", scope: "decidim.access_requests.verification.admin")
+                flash[:alert] = t("granted_authorizations.destroy.error", scope: "decidim.access_requests.verification.admin")
                 redirect_to granted_authorizations_path
               end
             end
           end
 
           private
+
+          def check_verification_manifest
+            redirect_to decidim_admin.users_path if verification_manifest.nil?
+          end
 
           def granted_authorizations
             Decidim::Verifications::Authorizations.new(
