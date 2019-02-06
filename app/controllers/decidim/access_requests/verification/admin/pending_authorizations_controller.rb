@@ -43,12 +43,12 @@ module Decidim
             DestroyAuthorization.call(authorization) do
               on(:ok) do
                 flash[:notice] = t("pending_authorizations.destroy.success", scope: "decidim.access_requests.verification.admin")
-                redirect_to granted_authorizations_path
+                redirect_to pending_authorizations_path
               end
 
               on(:invalid) do
                 flash.now[:alert] = t("pending_authorizations.destroy.error", scope: "decidim.access_requests.verification.admin")
-                redirect_to granted_authorizations_path
+                redirect_to pending_authorizations_path
               end
             end
           end
