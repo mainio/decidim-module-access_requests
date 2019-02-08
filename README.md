@@ -1,5 +1,10 @@
 # Decidim::AccessRequests
 
+[![Build Status](https://travis-ci.com/mainio/decidim-module-access_requests.svg?branch=master)](https://travis-ci.com/mainio/decidim-module-access_requests)
+[![codecov](https://codecov.io/gh/mainio/decidim-module-access_requests/branch/master/graph/badge.svg)](https://codecov.io/gh/mainio/decidim-module-access_requests)
+
+The gem has been developed by [Mainio Tech](https://www.mainiotech.fi/).
+
 A [Decidim](https://github.com/decidim/decidim) module that provides a new
 verification method that allows system administrators to define new verification
 workflows where the admins can provide access to specific users.
@@ -22,8 +27,6 @@ Alternatively, the admins can also provide access directly to specific users
 from the admin panel. This way, the users won't have to create the access
 requests themselves and they are automatically granted the access once the admin
 has given it.
-
-The gem has been developed by [Mainio Tech](https://www.mainiotech.fi/).
 
 ## Installation
 
