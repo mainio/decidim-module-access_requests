@@ -28,6 +28,9 @@ from the admin panel. This way, the users won't have to create the access
 requests themselves and they are automatically granted the access once the admin
 has given it.
 
+Development of this gem has been sponsored by the
+[City of Helsinki](https://www.hel.fi/).
+
 ## Installation
 
 Add this line to your application's Gemfile:
