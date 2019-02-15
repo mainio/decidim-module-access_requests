@@ -59,8 +59,7 @@ sv:
             step3:
               title: Step 3
               description: >
-                You will get notified once the request review has been
-                completed.
+                You will get notified once the request review has been completed.
     events:
       access_requests:
         confirmed:
