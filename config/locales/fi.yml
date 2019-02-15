@@ -58,7 +58,8 @@ fi:
               description: Odota pyynnön tarkastusta.
             step3:
               title: Vaihe 3
-              description: Saat ilmoituksen, kun pyyntösi on käsitelty.
+              description: >
+                Saat ilmoituksen, kun pyyntösi on käsitelty.
     events:
       access_requests:
         confirmed:
