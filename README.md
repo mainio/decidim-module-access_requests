@@ -69,7 +69,42 @@ en:
 
 ## Usage
 
-TODO
+For enabling the verifcation method:
+
+- Follow the installation instructions above.
+- Login to the system management section of Decidim at `/system`.
+- Enable the newly added verification method.
+
+After enabled, you can now send authorization requests for admins:
+
+- Login to Decidim.
+- Go to My account > Authorizations.
+- Click the newly added authorization ("Your access requests").
+- Click "Send request".
+
+After the request is sent, you can now login as admin to approve the request:
+
+- Login to Decidim as an admin user.
+- Go to Admin dashboard > Users > Verifications > Access requests.
+- You will see a list of received requests.
+- Click the check icon to approve an access request.
+
+After this, you can now control the access to certain functionality using
+Decidim's permissions (e.g. component permssions). For example, you can limit
+the creation of new proposals only for approved users.
+
+You are not limited for waiting for the users to send the requests. Another way
+to grant access is to directly grant it for the users. To do this:
+
+- Login to Decidim as an admin user.
+- Go to Admin dashboard > Users > Verifications > Access requests.
+- Click "Granted requests" from the top right corner of the view.
+- You will see a list of granted access requests if any are available.
+- Click "New" from the top right corner of the view.
+- Search the user you want to grant access to.
+- Click the check icon in the "Actions" column of the users listing.
+
+After this, the user is directly authorized to access the limited actions.
 
 ## Contributing
 
