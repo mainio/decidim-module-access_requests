@@ -4,6 +4,7 @@ SimpleCov.start do
   root ENV["ENGINE_ROOT"]
 
   add_filter "lib/decidim/access_requests/version.rb"
+  add_filter "lib/decidim/access_requests/generators"
   add_filter "/spec"
 end
 

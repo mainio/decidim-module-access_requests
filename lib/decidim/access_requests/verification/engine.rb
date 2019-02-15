@@ -18,6 +18,13 @@ module Decidim
           app.config.assets.precompile += %w(decidim_access_requests_manifest.css
                                              decidim/access_requests/verification.scss)
         end
+
+        def load_seed
+          # Enable the `:access_requests` authorization
+          org = Decidim::Organization.first
+          org.available_authorizations << :access_requests
+          org.save!
+        end
       end
     end
   end

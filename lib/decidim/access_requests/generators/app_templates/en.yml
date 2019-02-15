@@ -1,0 +1,6 @@
+en:
+  decidim:
+    authorization_handlers:
+      access_requests:
+        explanation: An admin will approve or deny access
+        name: Access requests
