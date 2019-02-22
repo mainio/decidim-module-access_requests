@@ -36,7 +36,7 @@ Development of this gem has been sponsored by the
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'decidim-access_requests'
+gem "decidim-access_requests"
 ```
 
 And then execute:
