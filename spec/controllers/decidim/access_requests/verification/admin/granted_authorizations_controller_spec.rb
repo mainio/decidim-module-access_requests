@@ -55,6 +55,23 @@ module Decidim::AccessRequests::Verification::Admin
         expect(assigns[:granted_authorizations].length).to eq(4)
         expect(subject).to render_template("decidim/access_requests/verification/admin/granted_authorizations/index")
       end
+
+      context "when there are more than 15 granted results" do
+        before do
+          create_list(
+            :authorization,
+            20,
+            :granted,
+            name: "ar_verification",
+            organization: organization
+          )
+        end
+
+        it "paginates the results" do
+          get :index
+          expect(assigns[:granted_authorizations].length).to eq(15)
+        end
+      end
     end
 
     describe "GET new" do

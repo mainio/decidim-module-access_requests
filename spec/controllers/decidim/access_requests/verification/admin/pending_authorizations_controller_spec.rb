@@ -55,6 +55,23 @@ module Decidim::AccessRequests::Verification::Admin
         expect(assigns[:pending_authorizations].length).to eq(6)
         expect(subject).to render_template("decidim/access_requests/verification/admin/pending_authorizations/index")
       end
+
+      context "when there are more than 15 pending results" do
+        before do
+          create_list(
+            :authorization,
+            20,
+            :pending,
+            name: "ar_verification",
+            organization: organization
+          )
+        end
+
+        it "paginates the results" do
+          get :index
+          expect(assigns[:pending_authorizations].length).to eq(15)
+        end
+      end
     end
 
     describe "PUT update" do

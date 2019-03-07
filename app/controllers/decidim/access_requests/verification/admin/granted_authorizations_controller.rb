@@ -18,9 +18,7 @@ module Decidim
           def index
             enforce_permission_to :index, :authorization
 
-            @granted_authorizations = AuthorizationPresenter.for_collection(
-              granted_authorizations
-            )
+            @granted_authorizations = granted_authorizations
           end
 
           def new
@@ -90,7 +88,7 @@ module Decidim
               organization: current_organization,
               name: verification_manifest.name,
               granted: true
-            )
+            ).query.page(params[:page]).per(15)
           end
 
           def authorization
