@@ -1,0 +1,69 @@
+es:
+  activemodel:
+    models:
+      decidim/access_requests/access_request_confirmed_event: Solicitud de acceso confirmada
+  decidim:
+    access_requests:
+      verification:
+        admin:
+          granted_authorizations:
+            destroy:
+              error: Ha ocurrido un error borrando la verificación.
+              success: Verificación borrada correctamente.
+            index:
+              name: Nombre
+              new: Nueva
+              nickname: Apodo
+              pending_authorizations: Solicitudes pendientes
+              remove_access: Revoca el acceso
+              title: Solicitudes aceptadas
+              username: Nombre de usuario
+            new:
+              actions: Acciones
+              created_at: Creado el
+              grant_access: Acceso concedido el
+              name: Nombre
+              nickname: Apodo
+              search: Buscar
+              users: Usuarios
+          pending_authorizations:
+            destroy:
+              error: Ha ocurrido un error revocando la solicitud de acceso.
+              success: Solicitud rechazada correctamente.
+            index:
+              approve_request: Acepta la solicitud
+              granted_authorizations: Solicitudes aceptadas
+              name: Nombre
+              nickname: Apodo
+              reject_request: Denegar la solicitud
+              title: Solicitudes pendientes
+            update:
+              error: Ha ocurrido un error verificando la solicitud para el usuario.
+              success: Acceso concedido correctamente para el usuario.
+        authorizations:
+          create:
+            error: Ha ocurrido un error creando la solicitud de acceso.
+            success: Solicitud de acceso creada correctamente.
+          edit:
+            title: Tu solicitud está pendiente
+          new:
+            title: Solicita acceso
+            send: Envía la solicitud
+          steps:
+            step1:
+              title: Paso 1
+              description: Envía la solicitud de acceso
+            step2:
+              title: Paso 2
+              description: Espera a que la solicitud se revise.
+            step3:
+              title: Paso 3
+              description: >
+                Serás notificado cuando la solicitud de acceso sea aceptada
+    events:
+      access_requests:
+        confirmed:
+          email_intro: Felicidades! Se te ha concedido acceso como %{verification_name}.
+          email_outro: Has recibido esta notificación porqué tu solicitud de acceso ha sido aprobada.
+          email_subject: Acceso concedido como %{verification_name}!
+          notification_title: Se te ha concedido acceso como %{verification_name}.
