@@ -65,6 +65,13 @@ en:
       your_requests:
         explanation: An admin will approve or deny access
         name: Your access requests
+      admin:
+        your_requests:
+          help:
+            - User requests access against the registered workflow
+            - An admin will review the request
+            - Admin will either approve or reject the access request
+            - The user will get notified that their access request has been either approved or rejected
 ```
 
 ## Usage
