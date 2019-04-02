@@ -1,7 +1,7 @@
 sv:
   activemodel:
     models:
-      decidim/access_requests/access_request_confirmed_event: Access request confirmed
+      decidim/access_requests/access_request_confirmed_event: Åtkomstbegäran bekräftade
   decidim:
     access_requests:
       verification:
@@ -11,32 +11,32 @@ sv:
               error: There was an error deleting the verification.
               success: Verification was deleted successfully.
             index:
-              name: Name
-              new: New
-              nickname: Nickname
-              pending_authorizations: Pending requests
-              remove_access: Remove access
-              title: Granted requests
-              username: Username
+              name: Namn
+              new: Ny
+              nickname: Smeknamn
+              pending_authorizations: Väntande förfrågan
+              remove_access: Ta bort tillgång
+              title: Beviljade förfrågningar
+              username: Användarnamn
             new:
-              actions: Actions
-              created_at: Created at
-              grant_access: Grant access
-              name: Name
-              nickname: Nickname
-              search: Search
-              users: Users
+              actions: Funktioner
+              created_at: Skapat på
+              grant_access: Ge åtkomst
+              name: Namn
+              nickname: Smeknamn
+              search: Sök
+              users: Användare
           pending_authorizations:
             destroy:
               error: There was an error rejecting the access request.
               success: Access request was rejected successfully.
             index:
-              approve_request: Grant access
-              granted_authorizations: Granted requests
-              name: Name
-              nickname: Nickname
-              reject_request: Reject access
-              title: Pending requests
+              approve_request: Ge åtkomst
+              granted_authorizations: Beviljade förfrågningar
+              name: Namn
+              nickname: Smeknamn
+              reject_request: Avvisa åtkomst
+              title: Väntande förfrågan
             update:
               error: There was an error verifying access for the user.
               success: Access successfully granted for the user.
@@ -45,25 +45,25 @@ sv:
             error: There was an error creating the access request.
             success: Access request successfully created.
           edit:
-            title: Your request is pending
+            title: Din begäran är väntande
           new:
-            title: Request access
-            send: Send request
+            title: Begär tillgång
+            send: Skicka förfrågan
           steps:
             step1:
-              title: Step 1
-              description: Send access request.
+              title: Steg 1
+              description: Skicka begäran om åtkomst.
             step2:
-              title: Step 2
-              description: Wait for review of the request.
+              title: Steg 2
+              description: Vänta för granskning av begäran.
             step3:
-              title: Step 3
+              title: Steg 3
               description: >
-                You will get notified once the request review has been completed.
+                Du kommer att få meddelande när den begär granskningen har slutförts.
     events:
       access_requests:
         confirmed:
-          email_intro: Congratulations! You have been granted access to %{verification_name}.
-          email_outro: You have received this notification because your access request has been approved.
-          email_subject: You have been granted access to %{verification_name}!
-          notification_title: You have been granted access to %{verification_name}.
+          email_intro: Grattis! Du har beviljats åtkomst till %{verification_name}.
+          email_outro: Du har fått detta meddelande eftersom din begäran har godkänts.
+          email_subject: Du har beviljats åtkomst till %{verification_name}!
+          notification_title: Du har beviljats åtkomst till %{verification_name}.

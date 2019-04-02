@@ -1,0 +1,69 @@
+ca:
+  activemodel:
+    models:
+      decidim/access_requests/access_request_confirmed_event: Sol·licitud d'accés confirmada
+  decidim:
+    access_requests:
+      verification:
+        admin:
+          granted_authorizations:
+            destroy:
+              error: Hi ha hagut un error esborrant la verificació.
+              success: Verificació esborrada correctament.
+            index:
+              name: Nom
+              new: Nova
+              nickname: Sobrenom
+              pending_authorizations: Sol·licituds pendents
+              remove_access: Revoca l'accés
+              title: Sol·licituds acceptades
+              username: Nom d'usuari
+            new:
+              actions: Accions
+              created_at: Creat el
+              grant_access: Accés concedit el
+              name: Nom
+              nickname: Sobrenom
+              search: Cerca
+              users: Usuaris
+          pending_authorizations:
+            destroy:
+              error: Hi ha hagut un error revocant la sol·licitud d'accés.
+              success: Sol·licitud rebutjada correctament.
+            index:
+              approve_request: Accepta la sol·licitud
+              granted_authorizations: Sol·licituds acceptades
+              name: Nom
+              nickname: Sobrenom
+              reject_request: Denega la sol·licitud
+              title: Sol·licituds pendents
+            update:
+              error: Hi ha hagut un error verificant la sol·licitud per l'usuari.
+              success: Accés concedit correctament per l'usuari.
+        authorizations:
+          create:
+            error: Hi ha hagut un error creant la sol·licitud d'accés.
+            success: Sol·licitud d'accés creada correctament.
+          edit:
+            title: La teva sol·licitud està pendent
+          new:
+            title: Sol·licita accés
+            send: Envia la sol·licitud
+          steps:
+            step1:
+              title: Pas 1
+              description: Envia la sol·licitud d'accés
+            step2:
+              title: Pas 2
+              description: Espera a que la sol·licitud es revisi.
+            step3:
+              title: Pas 3
+              description: >
+                Seràs notificat quan la sol·licitud d'accés sigui acceptada
+    events:
+      access_requests:
+        confirmed:
+          email_intro: Felicitats! Se t'ha concedit accés com a %{verification_name}.
+          email_outro: Has rebut aquesta notificació perquè la teva sol·licitud d'accés ha sigut aprovada.
+          email_subject: Accés concedit com a %{verification_name}!
+          notification_title: Se t'ha concedit accés com a %{verification_name}.
