@@ -35,3 +35,6 @@ end
 group :test do
   gem "codecov", require: false
 end
+
+# Remediate CVE-2019-5420
+gem "railties", ">= 5.2.2.1"
