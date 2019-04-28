@@ -39,7 +39,7 @@
               <td><%= l user.created_at, format: :short %></td>
 
               <td class="table-list__actions">
-                <%= icon_link_to "envelope-closed", current_or_new_conversation_path_with(user), t("decidim.contact"), class:"action-icon--new" %>
+                <%= icon_link_to "envelope-closed", current_or_new_conversation_path_with(user), t("decidim.contact"), class:"action-icon--new", target: "_blank" %>
                 <%= icon_link_to "circle-check", granted_authorizations_path(user_id: user.id), t(".grant_access"), class: "action-icon--verify", method: :post %>
               </td>
             </tr>
