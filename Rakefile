@@ -37,11 +37,3 @@ task :development_app do
     system("bundle exec rake db:seed")
   end
 end
-
-# Run all tests, include all
-RSpec::Core::RakeTask.new(:spec) do |t|
-  t.verbose = false
-end
-
-# Run both by default
-task default: [:spec]
