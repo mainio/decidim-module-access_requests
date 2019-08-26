@@ -13,8 +13,8 @@ require_relative "#{base_path}lib/decidim/access_requests/version"
 gem "decidim", Decidim::AccessRequests::DECIDIM_VERSION
 gem "decidim-access_requests", path: "."
 
-gem "bootsnap", "~> 1.3"
-gem "puma", "~> 3.0"
+gem "bootsnap", "~> 1.4"
+gem "puma", "~> 3.12"
 gem "uglifier", "~> 4.1"
 
 group :development, :test do
@@ -38,3 +38,6 @@ end
 
 # Remediate CVE-2019-5420
 gem "railties", ">= 5.2.2.1"
+
+# See: https://github.com/decidim/decidim/pull/5303
+gem "ransack", "~> 2.1.1"
