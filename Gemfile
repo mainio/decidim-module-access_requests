@@ -18,7 +18,7 @@ gem "puma", "~> 3.12"
 gem "uglifier", "~> 4.1"
 
 group :development, :test do
-  gem "byebug", "~> 10.0", platform: :mri
+  gem "byebug", "~> 11.0", platform: :mri
 
   gem "decidim-dev", Decidim::AccessRequests::DECIDIM_VERSION
 end
@@ -38,9 +38,3 @@ end
 
 # Remediate CVE-2019-5420
 gem "railties", ">= 5.2.2.1"
-
-# See: https://github.com/decidim/decidim/pull/5303
-gem "ransack", "~> 2.1.1"
-
-# See https://github.com/decidim/decidim/issues/5410
-gem "sprockets", "~> 3.7.2"
