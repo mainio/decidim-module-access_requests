@@ -41,3 +41,6 @@ gem "railties", ">= 5.2.2.1"
 
 # See: https://github.com/decidim/decidim/pull/5303
 gem "ransack", "~> 2.1.1"
+
+# See https://github.com/decidim/decidim/issues/5410
+gem "sprockets", "~> 3.7.2"
