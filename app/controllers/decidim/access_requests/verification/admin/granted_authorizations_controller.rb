@@ -36,9 +36,7 @@ module Decidim
                   ),
                 @query,
                 @state
-              )
-                                        .page(params[:page])
-                                        .per(15)
+              ).page(params[:page]).per(15)
           end
 
           def create
