@@ -11,6 +11,7 @@ es:
               error: Ha ocurrido un error borrando la verificación.
               success: Verificación borrada correctamente.
             index:
+              deleted_user: Deleted user
               name: Nombre
               new: Nueva
               nickname: Apodo
@@ -32,6 +33,7 @@ es:
               success: Solicitud rechazada correctamente.
             index:
               approve_request: Acepta la solicitud
+              deleted_user: Deleted user
               granted_authorizations: Solicitudes aceptadas
               name: Nombre
               nickname: Apodo
