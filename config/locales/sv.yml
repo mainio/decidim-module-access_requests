@@ -11,6 +11,7 @@ sv:
               error: There was an error deleting the verification.
               success: Verification was deleted successfully.
             index:
+              deleted_user: Deleted user
               name: Namn
               new: Ny
               nickname: Smeknamn
@@ -32,6 +33,7 @@ sv:
               success: Access request was rejected successfully.
             index:
               approve_request: Ge åtkomst
+              deleted_user: Deleted user
               granted_authorizations: Beviljade förfrågningar
               name: Namn
               nickname: Smeknamn
