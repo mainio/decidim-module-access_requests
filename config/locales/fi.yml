@@ -11,7 +11,7 @@ fi:
               error: Poistettaessa varmennusta tapahtui virhe.
               success: Varmennus poistettu onnistuneesti.
             index:
-              deleted_user: Deleted user
+              deleted_user: Poistettu käyttäjä
               name: Nimi
               new: Uusi
               nickname: Nimimerkki
@@ -33,7 +33,7 @@ fi:
               success: Pääsyoikeus evätty onnistuneesti.
             index:
               approve_request: Myönnä pääsyoikeus
-              deleted_user: Deleted user
+              deleted_user: Poistettu käyttäjä
               granted_authorizations: Myönnetyt pääsyoikeudet
               name: Nimi
               nickname: Nimimerkki
