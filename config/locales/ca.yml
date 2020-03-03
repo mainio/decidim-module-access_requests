@@ -11,6 +11,7 @@ ca:
               error: Hi ha hagut un error esborrant la verificació.
               success: Verificació esborrada correctament.
             index:
+              deleted_user: Deleted user
               name: Nom
               new: Nova
               nickname: Sobrenom
@@ -32,6 +33,7 @@ ca:
               success: Sol·licitud rebutjada correctament.
             index:
               approve_request: Accepta la sol·licitud
+              deleted_user: Deleted user
               granted_authorizations: Sol·licituds acceptades
               name: Nom
               nickname: Sobrenom
