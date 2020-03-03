@@ -9,13 +9,7 @@ module Decidim::AccessRequests::Verification::Admin
       # the verification method handle, we are using a customized controller to
       # bypass the problem
       def verification_manifest_handle
-        return "dummy" unless valid_manifest?
-
         "ar_verification"
-      end
-
-      def valid_manifest?
-        true
       end
     end
 
@@ -84,9 +78,15 @@ module Decidim::AccessRequests::Verification::Admin
       end
 
       context "when the handler is invalid" do
-        it "redirects the user" do
-          allow(subject).to receive(:valid_manifest?).and_return(false)
+        controller described_class do
+          # The "dummy" verification manifest has not been registered as an
+          # access request verification method, so it is invalid.
+          def verification_manifest_handle
+            "dummy"
+          end
+        end
 
+        it "redirects the user" do
           get :new
           expect(response).to redirect_to("/admin/users")
         end
