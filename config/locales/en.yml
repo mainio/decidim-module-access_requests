@@ -11,6 +11,7 @@ en:
               error: There was an error deleting the verification.
               success: Verification was deleted successfully.
             index:
+              deleted_user: Deleted user
               name: Name
               new: New
               nickname: Nickname
@@ -32,6 +33,7 @@ en:
               success: Access request was rejected successfully.
             index:
               approve_request: Grant access
+              deleted_user: Deleted user
               granted_authorizations: Granted requests
               name: Name
               nickname: Nickname

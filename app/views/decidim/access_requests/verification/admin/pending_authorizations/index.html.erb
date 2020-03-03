@@ -18,17 +18,27 @@
         <% @pending_authorizations.each do |authorization| %>
           <tr>
             <td>
-              <%= authorization.user.name %>
+              <% if authorization.user.deleted? %>
+                (<%= t(".deleted_user") %>)
+              <% else %>
+                <%= authorization.user.name %>
+              <% end %>
             </td>
             <td>
-              <%= authorization.user.nickname %>
+              <% if authorization.user.deleted? %>
+                (<%= t(".deleted_user") %>)
+              <% else %>
+                <%= authorization.user.nickname %>
+              <% end %>
             </td>
             <td class="table-list__actions">
-              <%= icon_link_to "person",
-                               decidim.profile_path(authorization.user.nickname),
-                               t("layouts.decidim.user_profile.account"),
-                               class:"action-icon--show",
-                               target: "_blank" %>
+              <% unless authorization.user.deleted? %>
+                <%= icon_link_to "person",
+                                 decidim.profile_path(authorization.user.nickname),
+                                 t("layouts.decidim.user_profile.account"),
+                                 class:"action-icon--show",
+                                 target: "_blank" %>
+              <% end %>
               <%= icon_link_to "circle-check",
                                pending_authorization_path(authorization.id),
                                t(".approve_request"),
