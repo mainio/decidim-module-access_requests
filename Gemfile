@@ -10,7 +10,7 @@ base_path = ""
 base_path = "../" if File.basename(__dir__) == "development_app"
 require_relative "#{base_path}lib/decidim/access_requests/version"
 
-gem "decidim", Decidim::AccessRequests::DECIDIM_VERSION
+gem "decidim", ">= 0.20.0", Decidim::AccessRequests::DECIDIM_VERSION
 gem "decidim-access_requests", path: "."
 
 gem "bootsnap", "~> 1.4"
@@ -20,7 +20,7 @@ gem "uglifier", "~> 4.1"
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
-  gem "decidim-dev", Decidim::AccessRequests::DECIDIM_VERSION
+  gem "decidim-dev", ">= 0.20.0", Decidim::AccessRequests::DECIDIM_VERSION
 end
 
 group :development do
