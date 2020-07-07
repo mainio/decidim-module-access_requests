@@ -12,9 +12,11 @@ module Decidim
           #
           # authorization - An Authorization to be confirmed.
           # form - A form object with the verification data to confirm it.
-          def initialize(authorization, form)
+          # session - An active user session
+          def initialize(authorization, form, session)
             @authorization = authorization
             @form = form
+            @session = session
           end
 
           # Executes the command. Broadcasts these events:
@@ -26,7 +28,7 @@ module Decidim
           def call
             parent = self
 
-            Decidim::Verifications::ConfirmUserAuthorization.call(authorization, form) do
+            Decidim::Verifications::ConfirmUserAuthorization.call(authorization, form, session) do
               on(:ok) do
                 send_notification
                 parent.send(:broadcast, :ok)
@@ -44,7 +46,7 @@ module Decidim
 
           private
 
-          attr_reader :authorization, :form
+          attr_reader :authorization, :form, :session
 
           def send_notification
             Decidim::EventsManager.publish(

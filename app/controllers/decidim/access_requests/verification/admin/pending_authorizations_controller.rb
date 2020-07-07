@@ -22,7 +22,7 @@ module Decidim
               handler_handle: verification_manifest.name
             ).with_context(current_organization: current_organization)
 
-            ConfirmUserAccessRequest.call(authorization, @form) do
+            ConfirmUserAccessRequest.call(authorization, @form, session) do
               on(:ok) do
                 flash[:notice] = t("pending_authorizations.update.success", scope: "decidim.access_requests.verification.admin")
                 redirect_to pending_authorizations_path
