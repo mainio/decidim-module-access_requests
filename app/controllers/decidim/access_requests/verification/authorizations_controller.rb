@@ -61,6 +61,14 @@ module Decidim
           tmpform = RequestForm.from_params(params)
           return tmpform.handler_name unless tmpform.handler_name.nil?
 
+          # When the new action is called, the authorization handle is the
+          # included as a URL parameter.
+          return params[:handler] if params[:action] == "new" && params[:handler].present?
+
+          # When the renew action is called, the authorization handle is the
+          # first part of the URL.
+          return request.path.split("/")[1] if params[:action] == "renew"
+
           # Determine the handle from the request path
           request.path.split("/").last
         end
