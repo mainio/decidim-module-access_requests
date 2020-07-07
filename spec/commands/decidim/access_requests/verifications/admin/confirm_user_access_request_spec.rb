@@ -7,7 +7,7 @@ module Decidim
     module Verification
       module Admin
         describe ConfirmUserAccessRequest do
-          subject { described_class.new(authorization, form) }
+          subject { described_class.new(authorization, form, session) }
 
           let(:organization) do
             create(:organization, available_authorizations: [verification_type])
@@ -28,6 +28,8 @@ module Decidim
               handler_handle: verification_type
             ).with_context(current_organization: organization)
           end
+
+          let(:session) { {} }
 
           let(:user) { authorization.user }
 
