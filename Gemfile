@@ -10,8 +10,7 @@ base_path = ""
 base_path = "../" if File.basename(__dir__) == "development_app"
 require_relative "#{base_path}lib/decidim/access_requests/version"
 
-#DECIDIM_VERSION = Decidim::AccessRequests::DECIDIM_VERSION
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.22-stable" }
+DECIDIM_VERSION = Decidim::AccessRequests::DECIDIM_VERSION
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-access_requests", path: "."

@@ -28,7 +28,7 @@ module Decidim
           def call
             parent = self
 
-            Decidim::Verifications::ConfirmUserAuthorization.call(authorization, form, session) do
+            Decidim::Verifications::ConfirmUserAuthorization.call(authorization, form) do
               on(:ok) do
                 send_notification
                 parent.send(:broadcast, :ok)

@@ -4,8 +4,6 @@ module Decidim
   module AccessRequests
     module Verification
       class AuthorizationsController < Decidim::ApplicationController
-        include Decidim::Verifications::Renewable
-
         helper_method :authorization
 
         before_action :load_authorization
