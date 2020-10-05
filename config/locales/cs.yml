@@ -1,51 +1,51 @@
 cs:
   activemodel:
     models:
-      decidim/access_requests/access_request_confirmed_event: Access request confirmed
+      decidim/access_requests/access_request_confirmed_event: Požadavek na přístup potvrzen
   decidim:
     access_requests:
       verification:
         admin:
           granted_authorizations:
             destroy:
-              error: There was an error deleting the verification.
-              success: Verification was deleted successfully.
+              error: Při odstraňování ověření došlo k chybě.
+              success: Ověření bylo úspěšně odstraněno.
             index:
-              deleted_user: Deleted user
-              name: Name
-              new: New
-              nickname: Nickname
-              pending_authorizations: Pending requests
-              remove_access: Remove access
-              title: Granted requests
-              username: Username
+              deleted_user: Odstraněný uživatel
+              name: Jméno
+              new: Nová
+              nickname: Přezdívka
+              pending_authorizations: Nevyřízené požadavky
+              remove_access: Odebrat přístup
+              title: Udělené žádosti
+              username: Uživatelské jméno
             new:
-              actions: Actions
-              created_at: Created at
-              grant_access: Grant access
-              name: Name
-              nickname: Nickname
-              search: Search
-              users: Users
+              actions: Akce
+              created_at: Vytvořeno v
+              grant_access: Povolit přístup
+              name: Jméno
+              nickname: Přezdívka
+              search: Hledat
+              users: Uživatelé
           pending_authorizations:
             destroy:
-              error: There was an error rejecting the access request.
-              success: Access request was rejected successfully.
+              error: Při odmítnutí žádosti o přístup došlo k chybě.
+              success: Požadavek na přístup byl úspěšně zamítnut.
             index:
-              approve_request: Grant access
-              deleted_user: Deleted user
-              granted_authorizations: Granted requests
-              name: Name
-              nickname: Nickname
-              reject_request: Reject access
-              title: Pending requests
+              approve_request: Povolit přístup
+              deleted_user: Odstraněný uživatel
+              granted_authorizations: Udělené žádosti
+              name: Jméno
+              nickname: Přezdívka
+              reject_request: Odmítnout přístup
+              title: Nevyřízené požadavky
             update:
-              error: There was an error verifying access for the user.
-              success: Access successfully granted for the user.
+              error: Při ověřování přístupu pro uživatele došlo k chybě.
+              success: Přístup byl úspěšně udělen uživateli.
         authorizations:
           create:
-            error: There was an error creating the access request.
-            success: Access request successfully created.
+            error: Při vytváření žádosti o přístup došlo k chybě.
+            success: Požadavek na přístup byl úspěšně vytvořen.
           edit:
             title: Your request is pending
           new:
