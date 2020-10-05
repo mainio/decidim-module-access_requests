@@ -47,25 +47,25 @@ cs:
             error: Při vytváření žádosti o přístup došlo k chybě.
             success: Požadavek na přístup byl úspěšně vytvořen.
           edit:
-            title: Your request is pending
+            title: Váš požadavek čeká
           new:
-            title: Request access
-            send: Send request
+            title: Žádost o přístup
+            send: Odeslat žádost
           steps:
             step1:
-              title: Step 1
-              description: Send access request.
+              title: Krok 1
+              description: Odeslat žádost o přístup.
             step2:
-              title: Step 2
-              description: Wait for review of the request.
+              title: Krok 2
+              description: Počkejte na přezkoumání žádosti.
             step3:
-              title: Step 3
+              title: Krok 3
               description: >
-                You will get notified once the request review has been completed.
+                Jakmile bude žádost dokončena, obdržíte upozornění.
     events:
       access_requests:
         confirmed:
-          email_intro: Congratulations! You have been granted access to %{verification_name}.
-          email_outro: You have received this notification because your access request has been approved.
-          email_subject: You have been granted access to %{verification_name}!
-          notification_title: You have been granted access to %{verification_name}.
+          email_intro: Gratulujeme! Přístup k %{verification_name} vám byl udělen.
+          email_outro: Obdrželi jste toto oznámení, protože váš požadavek na přístup byl schválen.
+          email_subject: Byl vám udělen přístup k %{verification_name}!
+          notification_title: Byl vám udělen přístup k %{verification_name}.
