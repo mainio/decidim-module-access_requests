@@ -12,7 +12,7 @@ require_relative "#{base_path}lib/decidim/access_requests/version"
 
 DECIDIM_VERSION = Decidim::AccessRequests::DECIDIM_VERSION
 
-gem "decidim", DECIDIM_VERSION
+gem "decidim", ">= 0.22.0", DECIDIM_VERSION
 gem "decidim-access_requests", path: "."
 
 gem "bootsnap", "~> 1.4"
@@ -22,16 +22,16 @@ gem "uglifier", "~> 4.1"
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
-  gem "decidim-dev", DECIDIM_VERSION
+  gem "decidim-dev", ">= 0.22.0", DECIDIM_VERSION
 end
 
 group :development do
   gem "faker", "~> 1.9"
-  gem "letter_opener_web", "~> 1.3"
+  gem "letter_opener_web", "~> 1.4", ">= 1.4.0"
   gem "listen", "~> 3.1"
   gem "spring", "~> 2.0"
   gem "spring-watcher-listen", "~> 2.0"
-  gem "web-console", "~> 3.5"
+  gem "web-console", "~> 3.7", ">= 3.7.0"
 end
 
 group :test do
@@ -39,4 +39,4 @@ group :test do
 end
 
 # Remediate CVE-2019-5420
-gem "railties", ">= 5.2.2.1"
+gem "railties", ">= 5.2.4.4"
