@@ -12,7 +12,7 @@ require_relative "#{base_path}lib/decidim/access_requests/version"
 
 DECIDIM_VERSION = Decidim::AccessRequests::DECIDIM_VERSION
 
-gem "decidim", DECIDIM_VERSION
+gem "decidim", ">= 0.22.0", DECIDIM_VERSION
 gem "decidim-access_requests", path: "."
 
 gem "bootsnap", "~> 1.4"
@@ -22,7 +22,7 @@ gem "uglifier", "~> 4.1"
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
-  gem "decidim-dev", DECIDIM_VERSION
+  gem "decidim-dev", ">= 0.22.0", DECIDIM_VERSION
 end
 
 group :development do
