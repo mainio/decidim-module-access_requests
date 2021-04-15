@@ -1,6 +1,6 @@
 # Decidim::AccessRequests
 
-[![Build Status](https://travis-ci.com/mainio/decidim-module-access_requests.svg?branch=master)](https://travis-ci.com/mainio/decidim-module-access_requests)
+[![Build Status](https://github.com/mainio/decidim-module-access_requests/actions/workflows/ci_access_requests.yml/badge.svg)](https://github.com/mainio/decidim-module-access_requests/actions)
 [![codecov](https://codecov.io/gh/mainio/decidim-module-access_requests/branch/master/graph/badge.svg)](https://codecov.io/gh/mainio/decidim-module-access_requests)
 
 The gem has been developed by [Mainio Tech](https://www.mainiotech.fi/).
