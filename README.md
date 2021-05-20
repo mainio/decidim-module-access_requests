@@ -94,7 +94,7 @@ After enabled, you can now send authorization requests for admins:
 After the request is sent, you can now login as admin to approve the request:
 
 - Login to Decidim as an admin user.
-- Go to Admin dashboard > Users > Verifications > Access requests.
+- Go to Admin dashboard > Participants > Verifications > Access requests.
 - You will see a list of received requests.
 - Click the check icon to approve an access request.
 
@@ -106,7 +106,7 @@ You are not limited for waiting for the users to send the requests. Another way
 to grant access is to directly grant it for the users. To do this:
 
 - Login to Decidim as an admin user.
-- Go to Admin dashboard > Users > Verifications > Access requests.
+- Go to Admin dashboard > Participants > Verifications > Access requests.
 - Click "Granted requests" from the top right corner of the view.
 - You will see a list of granted access requests if any are available.
 - Click "New" from the top right corner of the view.
