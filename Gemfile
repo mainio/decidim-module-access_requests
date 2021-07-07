@@ -13,7 +13,7 @@ require_relative "#{base_path}lib/decidim/access_requests/version"
 DECIDIM_VERSION = Decidim::AccessRequests::DECIDIM_VERSION
 # DECIDIM_VERSION = { github: "decidim/decidim", branch: "develop" }
 
-gem "decidim", DECIDIM_VERSION
+gem "decidim", ">= 0.24.2", DECIDIM_VERSION
 gem "decidim-access_requests", path: "."
 
 gem "bootsnap", "~> 1.4"
@@ -22,14 +22,14 @@ gem "uglifier", "~> 4.1"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
-  gem "decidim-dev", DECIDIM_VERSION
+  gem "decidim-dev", ">= 0.24.2", DECIDIM_VERSION
   gem "rubocop-faker"
   gem "rubocop-performance", "~> 1.6.0"
 end
 
 group :development do
   gem "faker", "~> 2.14"
-  gem "letter_opener_web", "~> 1.3"
+  gem "letter_opener_web", "~> 1.4", ">= 1.4.0"
   gem "listen", "~> 3.1"
   gem "spring", "~> 2.0"
   gem "spring-watcher-listen", "~> 2.0"
