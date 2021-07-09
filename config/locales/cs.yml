@@ -1,0 +1,71 @@
+cs:
+  activemodel:
+    models:
+      decidim/access_requests/access_request_confirmed_event: Požadavek na přístup potvrzen
+  decidim:
+    access_requests:
+      verification:
+        admin:
+          granted_authorizations:
+            destroy:
+              error: Při odstraňování ověření došlo k chybě.
+              success: Ověření bylo úspěšně odstraněno.
+            index:
+              deleted_user: Odstraněný uživatel
+              name: Jméno
+              new: Nová
+              nickname: Přezdívka
+              pending_authorizations: Nevyřízené požadavky
+              remove_access: Odebrat přístup
+              title: Udělené žádosti
+              username: Uživatelské jméno
+            new:
+              actions: Akce
+              created_at: Vytvořeno v
+              grant_access: Povolit přístup
+              name: Jméno
+              nickname: Přezdívka
+              search: Hledat
+              users: Uživatelé
+          pending_authorizations:
+            destroy:
+              error: Při odmítnutí žádosti o přístup došlo k chybě.
+              success: Požadavek na přístup byl úspěšně zamítnut.
+            index:
+              approve_request: Povolit přístup
+              deleted_user: Odstraněný uživatel
+              granted_authorizations: Udělené žádosti
+              name: Jméno
+              nickname: Přezdívka
+              reject_request: Odmítnout přístup
+              title: Nevyřízené požadavky
+            update:
+              error: Při ověřování přístupu pro uživatele došlo k chybě.
+              success: Přístup byl úspěšně udělen uživateli.
+        authorizations:
+          create:
+            error: Při vytváření žádosti o přístup došlo k chybě.
+            success: Požadavek na přístup byl úspěšně vytvořen.
+          edit:
+            title: Váš požadavek čeká
+          new:
+            title: Žádost o přístup
+            send: Odeslat žádost
+          steps:
+            step1:
+              title: Krok 1
+              description: Odeslat žádost o přístup.
+            step2:
+              title: Krok 2
+              description: Počkejte na přezkoumání žádosti.
+            step3:
+              title: Krok 3
+              description: >
+                Jakmile bude žádost dokončena, obdržíte upozornění.
+    events:
+      access_requests:
+        confirmed:
+          email_intro: Gratulujeme! Přístup k %{verification_name} vám byl udělen.
+          email_outro: Obdrželi jste toto oznámení, protože váš požadavek na přístup byl schválen.
+          email_subject: Byl vám udělen přístup k %{verification_name}!
+          notification_title: Byl vám udělen přístup k %{verification_name}.
