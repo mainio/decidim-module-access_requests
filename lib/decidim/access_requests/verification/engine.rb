@@ -16,11 +16,6 @@ module Decidim
           root to: "authorizations#new"
         end
 
-        initializer "decidim_access_requests.assets" do |app|
-          app.config.assets.precompile += %w(decidim_access_requests_manifest.css
-                                             decidim/access_requests/verification.scss)
-        end
-
         def load_seed
           # Enable the `:access_requests` authorization
           org = Decidim::Organization.first

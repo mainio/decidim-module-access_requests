@@ -10,8 +10,8 @@ base_path = ""
 base_path = "../" if File.basename(__dir__) == "development_app"
 require_relative "#{base_path}lib/decidim/access_requests/version"
 
-# DECIDIM_VERSION = Decidim::AccessRequests::DECIDIM_VERSION
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "develop" }
+DECIDIM_VERSION = Decidim::AccessRequests::DECIDIM_VERSION
+# DECIDIM_VERSION = { github: "decidim/decidim", branch: "develop" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-access_requests", path: "."
@@ -19,7 +19,6 @@ gem "decidim-access_requests", path: "."
 gem "bootsnap", "~> 1.4"
 gem "puma", ">= 5.0.0"
 gem "uglifier", "~> 4.1"
-gem "webpacker", "6.0.0.beta.7"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
