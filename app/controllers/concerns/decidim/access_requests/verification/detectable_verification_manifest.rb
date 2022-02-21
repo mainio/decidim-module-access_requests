@@ -15,7 +15,7 @@ module Decidim
         end
 
         def verification_manifest_handle
-          request.path.split("/")[2] if request.path =~ %r{^/admin/}
+          request.path.split("/")[2] if request.path.match? %r{^/admin/}
         end
       end
     end

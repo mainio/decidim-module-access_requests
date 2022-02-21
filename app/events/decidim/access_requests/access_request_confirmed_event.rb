@@ -19,12 +19,12 @@ module Decidim
       end
 
       def verification_name
-        handler_name = extra.dig("handler_name")
+        handler_name = extra["handler_name"]
         I18n.t("#{handler_name}.name", scope: "decidim.authorization_handlers")
       end
 
       def user_nickname
-        extra.dig("user_nickname")
+        extra["user_nickname"]
       end
     end
   end
