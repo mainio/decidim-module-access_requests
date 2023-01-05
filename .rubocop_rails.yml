@@ -3,6 +3,10 @@ require: rubocop-rails
 Rails:
   Enabled: true
 
+Rails/ActionFilter:
+  Include:
+    - decidim-*/app/controllers/**/*.rb
+
 Rails/ContentTag:
   Enabled: false
 
