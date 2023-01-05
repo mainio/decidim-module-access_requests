@@ -7,7 +7,7 @@ module Decidim
         # A command to confirm a previous partial authorization.
         # This is just a wrapper class to call the ConfirmUserAuthorization
         # command because we add the email notifications here.
-        class ConfirmUserAccessRequest < Rectify::Command
+        class ConfirmUserAccessRequest < Decidim::Command
           # Public: Initializes the command.
           #
           # authorization - An Authorization to be confirmed.

@@ -5,7 +5,7 @@ module Decidim
     module Verification
       module Admin
         # A command to destroy an authorization.
-        class DestroyAuthorization < Rectify::Command
+        class DestroyAuthorization < Decidim::Command
           # Public: Initializes the command.
           #
           # authorization - The authorization object to destroy.

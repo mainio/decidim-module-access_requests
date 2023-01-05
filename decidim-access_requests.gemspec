@@ -7,7 +7,7 @@ require "decidim/access_requests/version"
 Gem::Specification.new do |spec|
   spec.name = "decidim-access_requests"
   spec.version = Decidim::AccessRequests.version
-  spec.required_ruby_version = ">= 2.7"
+  spec.required_ruby_version = ">= 3.0"
   spec.authors = ["Antti Hukkanen"]
   spec.email = ["antti.hukkanen@mainiotech.fi"]
 

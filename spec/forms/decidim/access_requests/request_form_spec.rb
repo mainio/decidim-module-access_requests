@@ -36,7 +36,7 @@ module Decidim
         end
 
         describe "#handler_name" do
-          it { expect(form.handler_name).to be(handler_handle) }
+          it { expect(form.handler_name).to eq(handler_handle) }
         end
       end
     end
