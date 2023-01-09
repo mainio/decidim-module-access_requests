@@ -52,7 +52,7 @@ module Decidim
 
           context "when confirm access request does not pass" do
             before do
-              expect(form).to receive(:valid?).and_return(false)
+              allow(form).to receive(:valid?).and_return(false)
             end
 
             it "broadcasts invalid" do

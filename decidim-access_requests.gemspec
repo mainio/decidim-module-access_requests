@@ -30,4 +30,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "decidim-verifications", Decidim::AccessRequests.decidim_version
 
   spec.add_development_dependency "decidim-dev", Decidim::AccessRequests.decidim_version
+  spec.metadata["rubygems_mfa_required"] = "true"
 end
