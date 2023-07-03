@@ -8,10 +8,10 @@ sv:
         admin:
           granted_authorizations:
             destroy:
-              error: There was an error deleting the verification.
-              success: Verification was deleted successfully.
+              error: Det gick inte att ta bort verifieringen.
+              success: Verifieringen har tagits bort.
             index:
-              deleted_user: Deleted user
+              deleted_user: Raderad användare
               name: Namn
               new: Ny
               nickname: Smeknamn
@@ -29,23 +29,23 @@ sv:
               users: Användare
           pending_authorizations:
             destroy:
-              error: There was an error rejecting the access request.
-              success: Access request was rejected successfully.
+              error: Det gick inte att avvisa åtkomstbegäran.
+              success: Åtkomstbegäran avvisades.
             index:
               approve_request: Ge åtkomst
-              deleted_user: Deleted user
+              deleted_user: Raderad användare
               granted_authorizations: Beviljade förfrågningar
               name: Namn
               nickname: Smeknamn
               reject_request: Avvisa åtkomst
               title: Väntande förfrågan
             update:
-              error: There was an error verifying access for the user.
-              success: Access successfully granted for the user.
+              error: Det gick inte att verifiera åtkomst för användaren.
+              success: Åtkomst har beviljats för användaren.
         authorizations:
           create:
-            error: There was an error creating the access request.
-            success: Access request successfully created.
+            error: Det gick inte att skapa åtkomstbegäran.
+            success: Begäran om åtkomst har skapats.
           edit:
             title: Din begäran är väntande
           new:
