@@ -10,6 +10,7 @@ on:
 env:
   CI: "true"
   CODECOV: "true"
+  CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
 jobs:
   main:
