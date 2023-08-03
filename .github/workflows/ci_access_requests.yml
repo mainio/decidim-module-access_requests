@@ -1,5 +1,11 @@
 name: "[CI] Access Requests"
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - develop
+      - main
+      - release/*
+  pull_request:
 
 env:
   CI: "true"
@@ -26,11 +32,7 @@ jobs:
       DATABASE_PASSWORD: postgres
       DATABASE_HOST: localhost
     steps:
-      - uses: rokroskar/workflow-run-cleanup-action@v0.3.0
-        if: "github.ref != 'refs/heads/develop'"
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-      - uses: actions/checkout@v2.0.0
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 1
       - uses: ruby/setup-ruby@v1
@@ -40,11 +42,11 @@ jobs:
         name: Create test app
       - run: mkdir -p ./spec/decidim_dummy_app/tmp/screenshots
         name: Create the screenshots folder
-      - uses: nanasess/setup-chromedriver@v1.0.1
+      - uses: nanasess/setup-chromedriver@v2
       - run: bundle exec rspec
         name: RSpec
-      - uses: codecov/codecov-action@v1
-      - uses: actions/upload-artifact@v2
+      - uses: codecov/codecov-action@v3
+      - uses: actions/upload-artifact@v3
         if: always()
         with:
           name: screenshots
