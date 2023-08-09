@@ -1,0 +1,34 @@
+{
+  "name": "decidim-access_request",
+  "version": "0.1.0",
+  "description": "Provides a new verification method by admin",
+  "main": "index.js",
+  "author": "Antti Hukkanen <antti.hukkanen@mainiotech.fi>",
+  "license": "AGPL-3.0",
+  "scripts": {
+    "stylelint": "stylelint app/packs/**/*.scss"
+  },
+  "stylelint": {
+    "extends": "@decidim/stylelint-config"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/plugin-proposal-private-methods": "^7.18.6",
+    "@babel/plugin-transform-runtime": "^7.22.5",
+    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-react": "^7.22.5",
+    "@decidim/dev": "^0.27.2",
+    "@decidim/eslint-config": "^0.27.2",
+    "@decidim/stylelint-config": "^0.27.2",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-standard": "^3.1.0",
+    "stylelint": "^13.11.0"
+  }
+}
