@@ -36,9 +36,5 @@ group :development do
   gem "web-console", "~> 4.2"
 end
 
-group :test do
-  gem "codecov", require: false
-end
-
 # Remediate CVE-2019-5420
 gem "railties", ">= 5.2.2.1"
